@@ -13,6 +13,7 @@
 - **Cada _nodo_ del _árbol_ es un _objeto_** que representa un elemento del documento HTML
   - Podemos decir entonces que es una representación de los elementos del documento HTML a través de objetos
 - En nuestro caso, siempre que hablemos de _documento_ ó `document`, vamos a estar haciendo referencia al HTML con el que estemos trabajando
+- Es una _estructura viva_: cuando es modificada, la página que vemos en el browser se actuaiza para reflejar los cambios
 
 ![](https://www.kirupa.com/html5/images/DOM_js_72.png)
 
