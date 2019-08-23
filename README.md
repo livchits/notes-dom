@@ -48,12 +48,13 @@ ol.previousSibling;
 
 ### Tipos de nodos
 
-- _Document_: el nodo _raíz_ `document`
+- _Document_: el nodo _raíz_, `document`
 - _Element_: un elemento HTML
 - _Attr_: atributo de un elemento HTML
 - _Text_: contenido de texto de un nodo de tipo `Element` ó `Attr`
 - _Comment_: comentario HTML
 - _DocumentType_: declaración del _Doctype_
+- etc...
 
 #### `nodeType`
 
@@ -109,18 +110,34 @@ _Parte del DOM que muestra los nodos hijos de `body`_
 - `documentElement`
 - `head`
 - `body`
+- etc...
 
 ![](https://flaviocopes.com/dom/dom-nodes.png)
+
+También podemos obtener una colección ([HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)) de nodos de un tipo particular, por ejemplo utilizando las siguientes propiedades de `document`
+
+- `links` 
+- `images` 
+- `forms`
+- etc...
 
 - [Document - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
 #### Algunos métodos de `document`
+
+Los más utilizados forman parte de la [_Selectors API_](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors): esta API nos provee de métodos que nos permiten obtener de forma fácil aquellos nodos del _DOM_ de tipo _Element_, que matcheen con un determinado _selector_ (de forma análoga a los selectores de CSS)
 
 - `getElementById`
 - `querySelector`
 - `querySelectorAll`
 - `getElementsByTagName`
 - `getElementsByClassName`
+
+## Recorriendo el DOM
+
+El _DOM_ es un -arbol_ de elementos, con el nodo `document` en la raíz, que hace referencia al elemento `html` (tag), que a su vez contiene a sus elementos hijos `head` y `body`, etc.
+
+Para cada uno de estos elementos, podemos navegar a través de la estructura del _DOM_ y movernos entre sus diferentes nodos.
 
 ## Eventos
 
