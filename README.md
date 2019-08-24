@@ -139,6 +139,43 @@ El _DOM_ es un -arbol_ de elementos, con el nodo `document` en la raíz, que hac
 
 Para cada uno de estos elementos, podemos navegar a través de la estructura del _DOM_ y movernos entre sus diferentes nodos.
 
+### Obteniendo el nodo _parent_
+
+Cada _nodo_ del _DOM_ tiene 1 _parent_. Para obtenerlo podemos usar 
+
+- `Node.parentNode`
+- `Node.parentElement` (si el _parent_ es un _nodo_ de tipo _Element_)
+
+Generalmente vamos a utilizar `parentNode`
+
+### Obteniendo los _nodos children_
+
+#### todos los descendientes 
+
+Para chequear si un _nodo_ tiene _descendientes_, podemos usar
+
+- `<NODE>.hasChildNodes()`: retorna un valor _booleano_
+
+Para obtener una lista de los _nodos descendientes_, de tipo _Element_ de un _nodo_, usamos 
+
+- `<NODE>.childNodes`
+
+El _DOM_ también nos provee de la propiedad `<NODE>.children`. Esta incluye en el resultado, además de los nodos de tipo _Element_, los nodos de tipo _Text_ y espacios en blanco, por lo que generalmente vamos a preferir usar `childNodes`
+
+![](https://flaviocopes.com/dom/dom-get-children.png)
+
+#### Primer y último descendiente
+
+Para obtener el primer _child node_ de un nodo determinado, de tipo _Element_, usamos
+
+- `<NODE>.firstElementChild`
+
+Para obtener el último _child node_ de un nodo determinado, de tipo _Element_, usamos
+
+- `<NODE>.Node.lastElementChild`
+
+![](https://flaviocopes.com/dom/dom-get-first-last-child.png)
+
 ## Eventos
 
 - Los nodos pueden tener _event handlers_ ligados a ellos. Cuando un evento se dispara, los _event handlers_ se ejecutan
