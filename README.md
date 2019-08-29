@@ -135,7 +135,7 @@ Los más utilizados forman parte de la [_Selectors API_](https://developer.mozil
 
 ## Recorriendo el DOM
 
-El _DOM_ es un -arbol_ de elementos, con el nodo `document` en la raíz, que hace referencia al elemento `html` (tag), que a su vez contiene a sus elementos hijos `head` y `body`, etc.
+El _DOM_ es un _arbol_ de elementos, con el nodo `document` en la raíz, que hace referencia al elemento `html` (tag), que a su vez contiene a sus elementos hijos `head` y `body`, etc.
 
 Para cada uno de estos elementos, podemos navegar a través de la estructura del _DOM_ y movernos entre sus diferentes nodos.
 
