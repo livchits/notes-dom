@@ -114,6 +114,14 @@ _Parte del DOM que muestra los nodos hijos de `body`_
 
 ![](https://flaviocopes.com/dom/dom-nodes.png)
 
+##### Ejemplo usando `document.body`
+
+```js
+document.body.style.background = 'red'; // make the background red
+
+setTimeout(() => document.body.style.background = '', 3000); // return back
+```
+
 También podemos obtener una colección ([HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)) de nodos de un tipo particular, por ejemplo utilizando las siguientes propiedades de `document`
 
 - `links` 
@@ -175,6 +183,37 @@ Para obtener el último _child node_ de un nodo determinado, de tipo _Element_, 
 - `<NODE>.Node.lastElementChild`
 
 ![](https://flaviocopes.com/dom/dom-get-first-last-child.png)
+
+### Obteniendo los _nodos hermanos_ (siblings)
+
+- `<NODE>.previousElementSibling`
+- `<NODE>.nextElementSibling`
+
+### Editando el _DOM_
+
+La _API_ del _DOM_ nos provee de varios métodos para editar los nodos y modificar el documento.
+
+- `document.createElement()`: crea un nuevo nodo de tipo _Element_
+- `document.createTextNode()`: crea un nuevo nodo de tipo _Text_
+
+Podemos crear nuevos nodos y luego agregarlos a elementos del _DOM_ como _children_, utilizando
+
+- `document.appendChild()`
+
+```js
+const div = document.createElement('div');
+div.appendChild(document.createTextNode('Hello world!'));
+```
+
+#### Otros métodos para modificar el _DOM_
+
+- [`first.removeChild(second)`](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild): elimina el nodo _children_ `second` del nodo `first`
+- [`document.insertBefore(newNode, existingNode)`](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore): inserta `newNode` como hermano de `existingNode`, ubicándolo antes que `existingNode` en el _DOM_
+- [`element.appendChild(newChild)`](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild): modifica el _árbol_ debajo de `element`, agregándole `newChild`, después de los demás nodos _children_
+- [`element.prepend(newChild)`](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend): modifica el _árbol_ debajo de `element`, agregándole el nodo `newChild`, antes que los demás nodos _children_
+- [`element.replaceChild(newChild, existingChild)`](https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild): modifica el _árbol_ debajo de `element`, reemplazando `existingChild` por el nodo `newChild`
+- [`element.textContent = 'some text'`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent): modifica el contenido de un nodo de tipo _Text_ a “some text”
+- etc...
 
 ## Eventos
 
