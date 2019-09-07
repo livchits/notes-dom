@@ -51,7 +51,7 @@ ol.previousSibling;
 - _Document_: el nodo _raíz_, `document`
 - _Element_: un elemento HTML
 - _Attr_: atributo de un elemento HTML
-- _Text_: contenido de texto de un nodo de tipo `Element` ó `Attr`
+- _Text_: contenido de texto de un nodo de tipo `Element` ó `Attr`. **No tienen descendientes.**
 - _Comment_: comentario HTML
 - _DocumentType_: declaración del _Doctype_
 - etc...
