@@ -60,6 +60,7 @@ ol.previousSibling;
 
 - Con la propiedad [`nodeType`](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType) podemos saber de qué tipo es un nodo
 - `nodeType` retorna un entero que representa el tipo
+- Podemos usar [`nodeName`](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName) para obtener el nombre
 
 ## DOM API
 
