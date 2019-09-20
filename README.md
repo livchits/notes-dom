@@ -182,7 +182,7 @@ Para obtener el primer _child node_ de un nodo determinado, de tipo _Element_, u
 
 Para obtener el último _child node_ de un nodo determinado, de tipo _Element_, usamos
 
-- `<NODE>.Node.lastElementChild`
+- `<NODE>.lastElementChild`
 
 ![](https://flaviocopes.com/dom/dom-get-first-last-child.png)
 
