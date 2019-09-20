@@ -33,6 +33,7 @@
 ## Nodos
 
 - Todo lo que es accesible y modificable a través del DOM es un _nodo_
+
   - elementos HTML
   - atributos de un elemento HTML
   - contenido/texto dentro de un elemento
@@ -120,13 +121,13 @@ _Parte del DOM que muestra los nodos hijos de `body`_
 ```js
 document.body.style.background = 'red'; // make the background red
 
-setTimeout(() => document.body.style.background = '', 3000); // return back
+setTimeout(() => (document.body.style.background = ''), 3000); // return back
 ```
 
 También podemos obtener una colección ([HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)) de nodos de un tipo particular, por ejemplo utilizando las siguientes propiedades de `document`
 
-- `links` 
-- `images` 
+- `links`
+- `images`
 - `forms`
 - etc...
 
@@ -150,7 +151,7 @@ Para cada uno de estos elementos, podemos navegar a través de la estructura del
 
 ### Obteniendo el nodo _parent_
 
-Cada _nodo_ del _DOM_ tiene 1 _parent_. Para obtenerlo podemos usar 
+Cada _nodo_ del _DOM_ tiene 1 _parent_. Para obtenerlo podemos usar
 
 - `Node.parentNode`
 - `Node.parentElement` (si el _parent_ es un _nodo_ de tipo _Element_)
@@ -159,17 +160,17 @@ Generalmente vamos a utilizar `parentNode`
 
 ### Obteniendo los _nodos children_
 
-#### todos los descendientes 
+#### todos los descendientes
 
 Para chequear si un _nodo_ tiene _descendientes_, podemos usar
 
 - `<NODE>.hasChildNodes()`: retorna un valor _booleano_
 
-Para obtener una lista de los _nodos descendientes_, de tipo _Element_ de un _nodo_, usamos 
+Para obtener una lista de los _nodos descendientes_, de tipo _Element_ de un _nodo_, usamos
 
-- `<NODE>.childNodes`
+- `<NODE>.children`
 
-El _DOM_ también nos provee de la propiedad `<NODE>.children`. Esta incluye en el resultado, además de los nodos de tipo _Element_, los nodos de tipo _Text_ y espacios en blanco, por lo que generalmente vamos a preferir usar `childNodes`
+El _DOM_ también nos provee de la propiedad `<NODE>.childNodes`. Esta incluye en el resultado, además de los nodos de tipo _Element_, los nodos de tipo _Text_ y espacios en blanco, por lo que generalmente vamos a preferir usar `children`
 
 ![](https://flaviocopes.com/dom/dom-get-children.png)
 
